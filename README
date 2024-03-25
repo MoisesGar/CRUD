@@ -7,6 +7,7 @@ For getting start this project, you must follow the next steps.
 5.Use the file Query.sql for creating the BD on mysql Wokbench.
 6.If you changed the password or port you gotta update the file db.js.
 7.At last, if you have issues with the password of root and it doesn´t allow you to access, just follow the first minute and 15 seconds of the next video "https://www.youtube.com/watch?v=M6anvfnl6jY" and select root user, finally change the password of this user, this password will be use in db.js file.
+8.Use "npm run dev" for running the project
 
 Para comenzar a utilizar este proyecto, debes seguir los siguientes pasos.
 
@@ -17,4 +18,5 @@ Para comenzar a utilizar este proyecto, debes seguir los siguientes pasos.
 5.Usa el documento Query.sql dentro del proyecto para crear la base de datos.
 6.Si se decidio cambiar la contraseña y/o el puerto, no olvides actualizar esos datos en el archivo db.js para que la conexion funcione.
 7.Por ultimo, si existen problemas con la contraseña del usuario root y no le permite acceder a la base de datos creada, solo siga el primer minuto con 15 segundos del siguiente video "https://www.youtube.com/watch?v=M6anvfnl6jY" y seleccione root entre los usuarios, finalmente cambie la contraseña para este usuario, no olvide actualizar esta contraseña en el documento db.js para su correcto funcionamiento.
+8.Utilice "npm run dev" para iniciar el projecto
 
