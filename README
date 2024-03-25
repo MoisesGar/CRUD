@@ -1,0 +1,20 @@
+For getting start this project, you must follow the next steps.
+
+1.Download or clone the github repositorie to your local machine.
+2.Run the next comand on Terminal "npm install"
+3.Install Mysql Workbench from the next url "https://dev.mysql.com/downloads/workbench/"
+4.At the time you are installing Mysql Workbench it will ask for a password and a port default, keep it with you, it's important for configuration. I advice use the password "12345678" and the port 3306 cause the project is configurated with them.
+5.Use the file Query.sql for creating the BD on mysql Wokbench.
+6.If you changed the password or port you gotta update the file db.js.
+7.At last, if you have issues with the password of root and it doesn´t allow you to access, just follow the first minute and 15 seconds of the next video "https://www.youtube.com/watch?v=M6anvfnl6jY" and select root user, finally change the password of this user, this password will be use in db.js file.
+
+Para comenzar a utilizar este proyecto, debes seguir los siguientes pasos.
+
+1.Descarga o clona el repositorio de github en tu computadora.
+2.Corre el comando "npm install" en la Terminal.
+3.Instala mysql workbench del siguiente url "https://dev.mysql.com/downloads/workbench/"
+4.Al momento de instalar mysql workbench este pedira una contraseña y puerto por defecto, guardalos ya que los necesitaras mas adelante, son importantes para la configuracion, como recomendacion, utilice la contraseña "12345678" que es la utilizada en la conexion de este proyecto, tambien utilice el puerdo 3306.
+5.Usa el documento Query.sql dentro del proyecto para crear la base de datos.
+6.Si se decidio cambiar la contraseña y/o el puerto, no olvides actualizar esos datos en el archivo db.js para que la conexion funcione.
+7.Por ultimo, si existen problemas con la contraseña del usuario root y no le permite acceder a la base de datos creada, solo siga el primer minuto con 15 segundos del siguiente video "https://www.youtube.com/watch?v=M6anvfnl6jY" y seleccione root entre los usuarios, finalmente cambie la contraseña para este usuario, no olvide actualizar esta contraseña en el documento db.js para su correcto funcionamiento.
+
