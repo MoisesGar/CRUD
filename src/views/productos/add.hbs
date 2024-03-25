@@ -1,0 +1,46 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <div class=" card text-center">
+                <div class="card-header">
+                    <h3 class="text-uppercase">CREAR NUEVO PRODUCTO</h3>
+                </div>
+                <div class="card-body">
+                    <form action="/add" method="post">
+                        <div class="input-group mt-2">
+                            <label for="Descripcion" class="input-group-text">Articulo</label>
+                            <input class="form-control" type="text" name="Descripcion" id="Descripcion" placeholder="Descripcion: Recogedor" autofocus required>
+                        </div>
+                        <div class="input-group mt-2">
+                            <label for="Precio" class="input-group-text">Precio</label>
+                            <input class="form-control" type="number" step=".01" name="Precio" id="Precio" placeholder="Precio: 0.00" autofocus required>
+                        </div>
+                        <div class="input-group mt-2">
+                            <label for="Cantidad" class="input-group-text">Cantidad</label>
+                            <input class="form-control" type="number" name="Cantidad" id="Cantidad" placeholder="Cantidad" required>
+                        </div>
+                        <div class="input-group mt-2">
+                            <label for="Stock_Min" class="input-group-text">Stock_Min</label>
+                            <input class="form-control" type="number" name="Stock_Min" id="Stock_Min" placeholder="Stock_Min" required>
+                        </div>
+                        <div class="input-group mt-2">
+                            <label for="Stock_Max" class="input-group-text">Stock_Max</label>
+                            <input class="form-control" type="number" name="Stock_Max" id="Stock_Max" placeholder="Stock_Max" required>
+                        </div>
+                        <div class="input-group mt-2">
+                            <label for="ID_CategoriaProducto" class="input-group-text">Categoria</label>
+                            <select class="form-select" name="ID_CategoriaProducto" id="ID_CategoriaProducto" required>
+                                {{#each categorias}}
+                                    <option value="{{ID_CategoriaProducto}}">{{Descripcion}}</option>
+                                {{/each}}
+                            </select>
+                        </div>
+                        <div class="form-group mt-4 d-grid gap-2">
+                            <button class="btn btn-success">Crear</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

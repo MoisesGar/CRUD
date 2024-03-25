@@ -1,0 +1,62 @@
+<head>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+</head>
+<div class="container">
+  <row class="mt-5">
+    {{#if productos}}
+
+      <div class="col align-self-center">
+        <table class="table">
+          <thead>
+            <tr class="table-primary table table-striped text-center">
+              <th class="px-2" style="width: 20%">Descripcion</th>
+              <th class="px-2">Precio</th>
+              <th class="px-2">Cantidad</th>
+              <th class="px-2" style="width: 20%">Stock Min</th>
+              <th class="px-2" style="width: 20%">Stock Max</th>
+              <th class="px-2">Categoria</th>
+              <th class="px-2" style="width: 20%">Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each productos}}
+              <tr class="text-center">
+                <td class="align-middle" >{{Descripcion}}</td>
+                <td class="align-middle" >{{Precio}}</td>
+                <td class="align-middle" >{{Cantidad}}</td>
+                <td class="align-middle" >{{Stock_Min}}</td>
+                <td class="align-middle" >{{Stock_Max}}</td>
+                <td class="align-middle" >{{Categoria}}</td>
+                <td>
+                  <div>
+                    <a href="/edit/{{ID_Productos}}" class="btn btn-warning fa fa-pencil"></a>
+                    <a href="/delete/{{ID_Productos}}" class="btn btn-danger fa fa-trash-o mt-1"></a>
+                  </div>
+                </td>
+              </tr>
+            {{/each}}
+          </tbody>
+          <tfoot>
+            <tr class="table-primary">
+              <td colspan="4">Registro de Productos</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    {{else}}
+      <div class="card text-center mx-auto" style="width:auto">
+
+        <div class="card-header">
+          <h3>Debes Crear productos</h3>
+        </div>
+        <div class="card-body">
+          <p>Click en este boton para agregar producto</p>
+          <a href="/add" class="btn btn-primary">Crear</a>
+        </div>
+      </div>
+    {{/if}}
+  </row>
+</div>

@@ -1,0 +1,69 @@
+<head>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+</head>
+<div class="container text-center p-4">
+    <div class="row">
+        <div class="col align-self-end">
+            <div class=" card text-center">
+                <div class="card-header">
+                    <h3 class="text-uppercase">CREAR NUEVA CATEGORIA</h3>
+                </div>
+                <div class="card-body">
+                    <form action="/category" method="post">
+                        <div class="input-group mt-2">
+                            <label for="Descripcion" class="input-group-text">Categoria</label>
+                            <input class="form-control" type="text" name="Descripcion" id="Descripcion" placeholder="Descripcion: Electronicos" autofocus required>
+                        </div>
+                        <div class="form-group mt-4 d-grid gap-2">
+                            <button class="btn btn-success">Crear</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <row class="mt-5">
+            {{#if categorias}}
+            <div class="col align-self-start">
+                <table class="table">
+                <thead>
+                    <tr class="table-primary table table-striped text-center">
+                    <th class="px-2" style="width: 20%">Descripcion</th>
+                    <th class="px-2" style="width: 20%">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each categorias}}
+                    <tr class="text-center">
+                        <td class="align-middle" >{{Descripcion}}</td>
+                        <td>
+                            <div>
+                                <a href="/category/delete/{{ID_CategoriaProducto}}" class="btn btn-danger fa fa-trash-o mt-1"></a>
+                            </div>
+                        </td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+                <tfoot>
+                    <tr class="table-primary">
+                    <td colspan="4">Registro de Categorias</td>
+                    </tr>
+                </tfoot>
+                </table>
+            </div>
+            {{else}}
+            <div class="card text-center mx-auto" style="width:auto">
+                <div class="card-header">
+                <h3>Debes Crear Categorias</h3>
+                </div>
+                <div class="card-body">
+                <p>Click en este boton para agregar Categorias</p>
+                <a href="/category" class="btn btn-primary">Crear</a>
+                </div>
+            </div>
+            {{/if}}
+        </row>
+    </div>
+</div>
